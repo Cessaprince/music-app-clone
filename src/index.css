@@ -1,7 +1,9 @@
-
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
 
 /* global css */
 * {
+  font-family: "Google Sans", sans-serif;
   padding:0;
   margin: 0;
 }
