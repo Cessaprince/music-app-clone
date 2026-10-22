@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap");
 @import "tailwindcss";
 
 /* global css */
@@ -6,7 +6,37 @@
   font-family: "Google Sans", sans-serif;
 }
 
-body{
+body {
   margin: 0;
   padding: 0;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.sidebar,
+.main {
+  background: #121212;
+  padding: 10px 20px;
+}
+
+.grayed {
+  background: #222121;
+}
+.grayed-hover:hover {
+  background: #2e2d2d;
+}
+
+.grayed:hover {
+  background: #2e2d2d;
+}
+
+.hovered-group:hover {
+  background: #222121;
 }
