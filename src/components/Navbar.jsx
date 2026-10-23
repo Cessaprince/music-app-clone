@@ -19,11 +19,11 @@ const Navbar = () => {
         <div className="flex items-center gap-[35px]">
           {/* the search bar */}
           <div className="flex gap-[7px] items-center">
-            <Link className="grayed h-[45px] w-[45px] overflow-hidden flex items-center justify-center rounded-full p-[10px]">
+            <Link className="bg-[var(--grayed)] hover:bg-[var(--grayed-2)] h-[45px] w-[45px] overflow-hidden flex items-center justify-center rounded-full p-[10px]">
               <Home color='white' />
             </Link>
             {/* form */}
-            <div className="grayed flex items-center px-[15px] py-[9px] rounded-[25px] justify-between gap-[15px] w-[500px] max-w-[85%]">
+            <div className="bg-[var(--grayed)] hover:bg-[var(--grayed-2)] flex items-center px-[15px] py-[9px] rounded-[25px] justify-between gap-[15px] w-[500px] max-w-[85%]">
               <form className="flex items-center gap-[5px] w-full">
                 <Search color="white" />
                 <input type="search" name="" id="" className='w-full bg-transparent outline-none text-white [&::-webkit-search-cancel-button]:appearance-none' placeholder='What do you want to play?' />

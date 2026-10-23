@@ -11,6 +11,15 @@ body {
   padding: 0;
 }
 
+:root {
+  --grayed: #222121;
+  --sidebar-gray: #121212;
+  --grayed-2: #2e2d2d;
+  --purple-bg: #201453;
+  --purple-dark: #4a4a72;
+  --purple-light: #5a5a87;
+}
+
 @keyframes slide-in {
   0% {
     transform: translateX(-100%);
@@ -20,23 +29,14 @@ body {
   }
 }
 
-.sidebar,
-.main {
-  background: #121212;
-  padding: 10px 20px;
-}
-
-.grayed {
-  background: #222121;
-}
-.grayed-hover:hover {
-  background: #2e2d2d;
-}
-
-.grayed:hover {
-  background: #2e2d2d;
-}
-
-.hovered-group:hover {
-  background: #222121;
+/* Define your standard CSS keyframes */
+@keyframes slide-up {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }

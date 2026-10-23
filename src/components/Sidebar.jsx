@@ -24,7 +24,7 @@ const Sidebar = () => {
 
   return (
     <div className="h-full">
-      <div className="sidebar h-full flex flex-col gap-[15px] text-gray-300 w-[320px] px-[20px] py-[30px] rounded-[10px]">
+      <div className="bg-[var(--sidebar-gray)] h-full flex flex-col gap-[15px] text-gray-300 w-[320px] px-[20px] py-[30px] rounded-[10px]">
         <div className='flex flex-col gap-[10px] shrink-0'>
           {/* heading */}
           <div className="flex justify-between w-full items-center group cursor-pointer">
@@ -49,17 +49,17 @@ const Sidebar = () => {
 
           {/* playlist, artist, albums*/}
           <div className="flex justify-center items-center gap-[7px]">
-            <button className='grayed cursor-pointer capitalize hover:text-white w-fit px-[20px] py-[7px] text-[14px] transition-all duration-300 ease rounded-[20px]'>playlists</button>
-            <button className='grayed cursor-pointer capitalize hover:text-white w-fit px-[20px] py-[7px] text-[14px] transition-all duration-300 ease rounded-[20px]'>artists</button>
-            <button className='grayed cursor-pointer capitalize hover:text-white w-fit px-[20px] py-[7px] text-[14px] transition-all duration-300 ease rounded-[20px]'>albums</button>
+            <button className='bg-[var(--grayed)] hover:bg-[var(--grayed-2)] cursor-pointer capitalize hover:text-white w-fit px-[20px] py-[7px] text-[14px] transition-all duration-300 ease rounded-[20px]'>playlists</button>
+            <button className='bg-[var(--grayed)] hover:bg-[var(--grayed-2)] cursor-pointer capitalize hover:text-white w-fit px-[20px] py-[7px] text-[14px] transition-all duration-300 ease rounded-[20px]'>artists</button>
+            <button className='bg-[var(--grayed)] hover:bg-[var(--grayed-2)]cursor-pointer capitalize hover:text-white w-fit px-[20px] py-[7px] text-[14px] transition-all duration-300 ease rounded-[20px]'>albums</button>
           </div>
 
           {/* search form */}
           <div className="flex items-center justify-between w-full gap-[30px]">
-            <div
+            <form
               ref={searchRef}
-              className={`flex gap-[5px] items-center flex-1 py-[5px] ${searchLibrary ? 'px-[10px] grayed rounded-[5px] animate-[slide-in_0.3s_ease-out_forwards]' : ''}`}>
-              <span className="grayed-hover flex items-center justify-center p-[7px] rounded-full">
+              className={`flex gap-[5px] items-center flex-1 py-[5px] ${searchLibrary ? 'px-[10px] bg-[var(--grayed)] rounded-[5px] animate-[slide-in_0.3s_ease-out_forwards]' : ''}`}>
+              <span className="hover:bg-[var(--grayed-2)] flex items-center justify-center p-[7px] rounded-full">
                 <SearchIcon
                   onClick={() => {
                     setSearchLibrary(true)
@@ -70,7 +70,7 @@ const Sidebar = () => {
               </span>
 
               <input type="search" name="" id="" className={`[&::-webkit-search-cancel-button]:appearance-none w-full text-[13px] outline-none ${searchLibrary ? 'block' : 'hidden'}`} placeholder='Search in your library' />
-            </div>
+            </form>
 
             <div className="flex items-center gap-[7px] ">
               <p className={`font-light capitalize text-[13px] text-gray-300 ${searchLibrary ? 'hidden' : 'block'}`}>recents</p>
@@ -84,7 +84,7 @@ const Sidebar = () => {
         <div className="flex flex-col gap-[10px] flex-1 min-h-0 overflow-y-auto">
 
           {/* each playlist */}
-          <div className="hovered-group group flex gap-[10px] items-center cursor-pointer p-[7px] rounded-[5px]">
+          <div className="hover:bg-[var(--grayed)] group flex gap-[10px] items-center cursor-pointer p-[7px] rounded-[5px]">
             <div className="relative h-[50px] w-[50px] overflow-hidden shrink-0 rounded-[5px]">
               <img src={playlistImg} alt="" className='h-full w-full object-cover' />
               {/* hover overlay */}
@@ -100,7 +100,7 @@ const Sidebar = () => {
           </div>
 
           {/* liked songs */}
-          <div className="hovered-group group flex gap-[10px] items-center p-[7px] rounded-[5px] cursor-pointer">
+          <div className="hover:bg-[var(--grayed)] group flex gap-[10px] items-center p-[7px] rounded-[5px] cursor-pointer">
             <div className="relative h-[50px] w-[50px] shrink-0 flex items-center justify-center rounded-[5px] bg-linear-to-b from-violet-900 to-teal-500">
               <Heart fill="white" className='text-white' />
 
@@ -117,7 +117,7 @@ const Sidebar = () => {
           </div>
 
           {/*each artist*/}
-          <div className="hovered-group group flex gap-[10px] items-center cursor-pointer p-[7px] rounded-[5px]">
+          <div className="hover:bg-[var(--grayed)] group flex gap-[10px] items-center cursor-pointer p-[7px] rounded-[5px]">
             <div className="relative h-[50px] w-[50px] overflow-hidden shrink-0 rounded-full">
               <img src={artist} alt="" className='h-full w-full object-cover' />
               {/* hover overlay */}
