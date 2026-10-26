@@ -4,6 +4,7 @@ import Dashboard from './components/Dashboard'
 import Home from './pages/Home'
 import GetStarted from './pages/GetStarted'
 import Login from './pages/Login'
+import Register from './pages/Register'
 
 
 const App = () => {
@@ -12,8 +13,9 @@ const App = () => {
       <Route path="/" element={<Dashboard />}>
         <Route index element={<Home />} />
       </Route>
-      <Route path="get-started" element={<GetStarted/>}></Route>
-      <Route path="login" element={<Login/>}></Route>
+      <Route path="get-started" element={<GetStarted />}></Route>
+      <Route path="login" element={<Login />}></Route>
+      <Route path="register" element={<Register />}></Route>
     </Routes>
   )
 }

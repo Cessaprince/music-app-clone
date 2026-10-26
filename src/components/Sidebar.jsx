@@ -34,11 +34,11 @@ const Sidebar = () => {
 
             </div>
             <div className="flex items-center gap-[5px]">
-              <button className="grayed h-[35px] w-[35px] flex justify-center items-center rounded-full cursor-pointer transition-all duration-300 ease-in-out">
+              <button className="bg-[var(--grayed)] hover:bg-[var(--grayed-2)] h-[35px] w-[35px] flex justify-center items-center rounded-full cursor-pointer transition-all duration-300 ease-in-out">
                 <Plus size={20} className='text-gray-300 hover:text-white' />
               </button>
 
-              <button className="grayed-hover h-[35px] w-[35px] flex justify-center items-center cursor-pointer rounded-full transition-all duration-300 ease-in-out">
+              <button className="hover:bg-[var(--grayed-2)] h-[35px] w-[35px] flex justify-center items-center cursor-pointer rounded-full transition-all duration-300 ease-in-out">
                 <Minimize2 size={18} className='text-gray-300 hover:text-white' />
               </button>
 
