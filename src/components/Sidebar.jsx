@@ -2,6 +2,7 @@ import { Heart, ListCollapse, Play, Minimize2, Plus, SearchIcon, TableOfContents
 import React, { useState, useRef, useEffect } from 'react'
 import playlistImg from '../images/album-cover.jpeg'
 import artist from '../images/musician.jpeg'
+import { useNavigate } from 'react-router-dom'
 
 const Sidebar = () => {
   const [collapseOpen, setCollapseOpen] = useState(false);
@@ -21,6 +22,8 @@ const Sidebar = () => {
     }
   }, [])
 
+
+  const navigate = useNavigate()
 
   return (
     <div className="h-full">
@@ -100,7 +103,11 @@ const Sidebar = () => {
           </div>
 
           {/* liked songs */}
-          <div className="hover:bg-[var(--grayed)] group flex gap-[10px] items-center p-[7px] rounded-[5px] cursor-pointer">
+          <div
+            onClick={() => {
+              navigate('/collection/liked-songs')
+            }}
+            className="hover:bg-[var(--grayed)] group flex gap-[10px] items-center p-[7px] rounded-[5px] cursor-pointer">
             <div className="relative h-[50px] w-[50px] shrink-0 flex items-center justify-center rounded-[5px] bg-linear-to-b from-violet-900 to-teal-500">
               <Heart fill="white" className='text-white' />
 

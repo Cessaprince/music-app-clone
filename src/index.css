@@ -18,6 +18,7 @@ body {
   --purple-bg: #201453;
   --purple-dark: #4a4a72;
   --purple-light: #5a5a87;
+  --purple-bg2: rgb(69, 47, 134);
 }
 
 @keyframes slide-in {
