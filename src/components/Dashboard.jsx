@@ -4,13 +4,19 @@ import { ChevronLeft, Ellipsis, ListCollapse, Minimize2 } from 'lucide-react'
 import Sidebar from './Sidebar'
 import Navbar from './Navbar'
 import MusicSidebar from './MusicSidebar'
+import MusicStatusbar from './MusicStatusbar'
 
 const Dashboard = () => {
-  const [openSong, setOpenSong] = useState(false);
+  
+  //a state for checking if the song playing at the right hand side is open or not
+  const [openSong, setOpenSong] = useState(null);
 
   const openingSong = () => {
     setOpenSong(false)
   }
+  //the state for the music status bar that will show in all the pages
+  const [currentSong, setCurrentSong] = useState(true)
+
 
   return (
     <div className="h-screen flex flex-col bg-black">
@@ -23,9 +29,9 @@ const Dashboard = () => {
         <main className="flex flex-1 gap-[10px] min-w-0 min-h-0 overflow-hidden px-[10px]">
 
           {/* the outlet: every page shows here. 80% when the song side is closed, 60% when it is open */}
-          <div className={`h-full min-w-0 ${openSong ? 'w-[60%]' : 'w-[95%]'} overflow-y-auto`}>
-            {/* openSong is passed down so any page can use it (Home uses it for its grid) */}
-            <Outlet context={{ openSong }} />
+          <div className={`h-full min-w-0 ${openSong ? 'w-[60%]' : 'w-[95%]'} overflow-y-auto rounded-[10px]`}>
+            {/* openSong is passed down so any page can use it */}
+            <Outlet context={{ openSong, currentSong, setCurrentSong }} />
           </div>
 
           {/*opening song*/}
@@ -64,6 +70,9 @@ const Dashboard = () => {
           </div>
         </main>
       </div>
+
+      {currentSong && <MusicStatusbar/>}
+
     </div>
   )
 }

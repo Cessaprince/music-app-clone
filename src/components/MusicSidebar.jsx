@@ -5,7 +5,7 @@ import { PlusCircle, ShareIcon } from 'lucide-react'
 const MusicSidebar = () => {
   return (
     <div className='w-full flex flex-col gap-[15px]'>
-      <div className="h-[450px] w-full overflow-hidden rounded-[10px]">
+      <div className="h-[400px] w-full overflow-hidden rounded-[10px]">
         <img src={musicImg} alt="" className='h-full w-full object-cover' />
       </div>
       {/* song and singer*/}

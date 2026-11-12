@@ -19,7 +19,7 @@ const CollectionDetails = () => {
   const [activeSong, setActiveSong] = useState(null)
 
   return (
-    <div className='rounded-[10px] overflow-y-auto h-full'>
+    <div className='w-full overflow-y-auto h-full'>
 
       {/* header part */}
       <div className="flex items-end gap-[20px] border-b-[0.11px] border-black p-[30px] bg-[var(--purple-bg2)]">

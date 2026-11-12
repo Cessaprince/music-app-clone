@@ -9,7 +9,7 @@ const Home = () => {
   const { openSong } = useOutletContext()
 
   return (
-    <div className='rounded-[10px]'>
+    <div className='w-full'>
       {/* middle side music, albums and releases */}
       <div className="h-full p-[10px] overflow-y-auto text-gray-200 bg-linear-to-b from-[var(--purple-bg)] to-[var(--sidebar-gray)] rounded-[7px]">
         <header className='px-[25px] py-[7px]'>
